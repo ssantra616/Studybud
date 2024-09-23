@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 {% load static %}
-<html>
+<html lang="en">
+
 <head>
     <meta charset= 'utf-8'>
     <meta http-equiv = 'X-UA-Compatible' content = 'IE=edge'>
     <title>StudyBud</title>
     <meta name='viewport' content = 'width=divice-width, initial-scale=1'>
     <link rel = 'stylesheet' type="tect/css" media="screen" href="{% static 'styles/main.css' %}">
+    <title>StudyBuddy - Find study partners around the world</title>
 </head>
+
 <body>
+    <header class="header header--loggedIn">
+
+    </header>
     {% include 'navbar.html' %}
 
     {% if messages %}
     <li class="messages">
         {% for message in messages %}
-        <li></li>{{ message }}</li>
+        <li>{{ message }}</li>
             {% endfor %}
     </ul>
     {% endif %}
@@ -25,7 +31,8 @@
 
 
     {% endblock %}
-
+    <script src="{% static 'js/script.js' %}"></script>
+     
 </body>
 
 </html>
